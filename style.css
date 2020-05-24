@@ -1,0 +1,32 @@
+/** All elements that affect every page**/
+
+body {
+    margin: 0rem;
+    padding: 1px;
+    background-color: blue;
+}
+
+.heading {
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin: 0rem;
+    padding: 1.33rem;
+}
+
+.heading p {
+    font-style: italic;
+    padding-top: 3px;
+    margin-bottom: 0rem;
+}
+
+.heading h1 {
+    margin-top: 0rem;
+}
+
+nav {
+    background-color: red;
+    text-align: right;
+}
+
+/** elements for indiviaual page**/
