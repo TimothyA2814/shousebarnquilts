@@ -13,6 +13,7 @@ body {
     color: white;
     margin: 0rem;
     padding: 1.33rem;
+    display: none;
 }
 
 .heading p {
@@ -25,9 +26,21 @@ body {
     margin-top: 0rem;
 }
 
-nav {
+.main-nav {
     background-color: red;
-    text-align: center;
+    text-align: right;
+}
+
+.main-nav p {
+    display: inline;
+    text-align: left;
+    color: white;
+}
+
+.main-nav a {
+    
+    padding-right: 1rem;
+
 }
 
 .footnote {
@@ -37,13 +50,67 @@ nav {
 
 /** elements for indiviaual page**/
 
-.about {
-    text-align: center;
-}
 
-.img {
+.image-showcase img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
 
+/**gallery page elements**/
+
+/** css flex box for the gallery page**/
+.gallery {
+    display: flex;
+    align-items: baseline;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+.gallery div {
+    text-align: center;
+    color: white;
+}
+
+.gallery img:hover {
+    transform: scale(1.25);
+
+}
+
+/**main page elements**/
+
+
+/**css flexbox for main page**/
+.about {
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.about p {
+    max-width: 300px;
+}
+
+/** responsive design elements**/
+
+@media (max-width: 800px) {
+    .heading {
+        display: contents;
+    }
+    .main-nav {
+        display: none;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
 }
