@@ -38,7 +38,6 @@ body {
 }
 
 .main-nav a {
-    
     padding-right: 1rem;
 
 }
@@ -93,6 +92,12 @@ body {
 
 .about p {
     max-width: 300px;
+}
+
+/** Contacts page elements**/
+.contact {
+    max-width: 300px;
+    text-align: left;
 }
 
 /** responsive design elements**/
