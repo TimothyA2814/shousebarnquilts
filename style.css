@@ -29,6 +29,7 @@ body {
 .main-nav {
     background-color: red;
     text-align: right;
+    margin-bottom: 1rem;
 }
 
 .main-nav p {
@@ -73,7 +74,7 @@ body {
 }
 
 .gallery img:hover {
-    transform: scale(1.25);
+    transform: scale(1.20);
 
 }
 
@@ -102,7 +103,7 @@ body {
 
 /** responsive design elements**/
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .heading {
         display: contents;
     }
