@@ -26,3 +26,14 @@ function showImage(i) {
     images[imageIndex-1].style.display = "block";
     dot[imageIndex-1].className += " active";
 }
+
+//menu nav 
+function showMenu (){
+    let menu = document.getElementsByClassName("main-nav");
+    if (menu.style.display = "block"){
+        menu.style.display = "none";
+    }
+    else {
+        menu.style.display = "block";
+    }
+}
