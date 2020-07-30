@@ -1,39 +1,38 @@
 // image showcase code
-var imageIndex = 1;
-ShowImage (imageIndex);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function nextImage (i) {
-    showImage (imageIndex += i);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function currentImage(i) {
-    showImage (imageIndex = i);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function showImage(i) {
-    let n;
-    let images = document.getElementsByClassName("image-show");
-    let dot = document.getElementsByClassName("dot");
-    if (i > images.length) {imageIndex = 1}
-    if (i < 1) {imageIndex = images.length}
-    for (n = 0; n < images.length; n++) {
-        images[n].style.display = "none";
-    }
-    for (n = 0; n < dot.length; n++){
-        dot[n].className = dot[n].className.replace("active", "");
-    }
-
-    images[imageIndex-1].style.display = "block";
-    dot[imageIndex-1].className += " active";
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
+
 
 //menu nav 
 function showMenu (){
-    let menu = document.getElementsByClassName("main-nav");
-    if (menu.style.display = "block"){
-        menu.style.display = "none";
-    }
-    else {
-        menu.style.display = "block";
-    }
+    var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }

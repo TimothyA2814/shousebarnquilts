@@ -6,7 +6,7 @@
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">-->
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+    <!--<script src="script.js"></script>-->
     <title>Shouse Barn Quilts</title>
     </head>
 
@@ -16,43 +16,49 @@
             <h1>Shouse Barn Quilts</h1>
         </header>
 
-        <nav id="menu">
-            <icon class="fa fa-bars" onclick="showMenu()" >Menu</icon>
-            <div class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
+        <div class="topnav">
+            <a href="javascript:void(0);" class="fa fa-bars" onclick="showMenu()"></a>
+            <div id="myLinks">
+              <a href="index.html">home</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="contact.html">Contact</a>
             </div>
-        </nav>
+            
+          </div>
+
+          <nav class="main-nav">
+            <a href="index.html">home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+          </nav>
 
     
         <!-- rotating image showcase WIP-->
-        <div class="image-showcase">
+        <div class="slideshow-container">
 
-            <div class="image-show">
-                <img src="https://via.placeholder.com/800x400" class="img">
-                <h3>"I love my barn quilt" - John D.</h3>
+            <div class="mySlides fade">
+                <img src="https://via.placeholder.com/800x400" style="width:100%">
             </div>
             
-            <div class="image-show">
-                <img src="https://via.placeholder.com/800x400" class="img">
-                <h3>"Hand made and built to last" - Jane D.</h3>
+            <div class="mySlides fade">
+                <img src="https://via.placeholder.com/800x400" style="width:100%">
             </div>
-
-            <div class="image-show">
-                <img src="https://via.placeholder.com/800x400" class="img">
-                <h3>"It add color and personaity to my old barn" - Rob D.</h3>
+            
+            <div class="mySlides fade">
+                <img src="https://via.placeholder.com/800x400" style="width:100%">
             </div>
-
-            <a class="back" onclick="nextImage(-1)">&#10094;</a>
-            <a class="next" onclick="nextImage(1)">&#10095;</a>
-        </div>
-
-        <div class="dots">
-            <span class="dot" onclick="currentImage(1)"></span> 
-            <span class="dot" onclick="currentImage(2)"></span> 
-            <span class="dot" onclick="currentImage(3)"></span> 
-        </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
 
     
         <main class="home">
@@ -82,6 +88,8 @@
                 <img src="https://via.placeholder.com/250" class="img">
                 <p>Each barn quilt is made to order. Check out the <a href="gallery.html">Gallery</a> for patterns, size and pricing.</p>
             </div>
+
+            <script src="script.js"></script>
         </main>
 
     <footer class="footnote">

@@ -29,89 +29,95 @@ h2 {
 
 /**navagation elements**/
 
-#menu {
-    overflow: hidden;
-    position: relative;
-}
-
 .main-nav {
     display: none;
 }
-
-icon {
-    font-size: 22px;
+.topnav {
+    overflow: hidden;
+    background-color: lightgrey;
 }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /**image showcase elements**/
+  
+.mySlides {display: none}
+img {vertical-align: middle;}
 
-icon:hover {
-    background-color: blueviolet;
-}
-
-/** elements for image showcase**/
-
-.image-showcase {
-    max-width: 600px;
+.slideshow-container {
+  max-width: 800px;
   position: relative;
   margin: auto;
 }
 
-.image-show {
-    display: none;
-}
-
-.image-show img {
-    vertical-align: center;
-    width: 100%;
-}
-
-.image-show h3 {
-    color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 1.38rem;
-  padding: 0.5rem;
-  position: absolute;
-  bottom: 0.05rem;
-  width: 100%;
-  text-align: center;
-    
-}
-
-.dots {
-    text-align: center;
-}
-.dot {
-    cursor: pointer;
-    height: 1rem;
-    width: 2rem;
-    margin: 0 1.38rem;
-    background-color: slategray;
-    border-radius: 33%;
-    display: inline-block;
-}
-
-.active, .dot:hover {
-    background-color: black;
-}
-
-
-.back, .next {
-    cursor: pointer;
+.prev, .next {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 0.25rem;
-  color: slategray;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-  /**home page content**/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+  /**home page elements**/
 
   .home h2 {
       text-align: center;
@@ -126,6 +132,28 @@ icon:hover {
       margin: 0rem 1.25rem;
       text-align: center;
   }
+
+  /**Gallery page elements**/
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.product {
+    padding-bottom: 8px;
+}
+
+table{
+    width: 250px;
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
 
 /** Contacts page elements**/
 .contact {
@@ -144,17 +172,22 @@ icon:hover {
 
 /** responsive design elements**/
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 720px) {
+
+    .topnav {
+        display: none;
+    }
 
     .main-nav {
         display: flex;
         justify-content: space-evenly;
-        background-color: silver;
+        background-color: lightgrey;
     }
     
     .main-nav a {
         color: black;
         text-decoration: none;
+        font-size: 25px;
     }
     
     .main-nav a:hover {
@@ -163,7 +196,7 @@ icon:hover {
     
 
     .image-showcase {
-        max-width: 800px;
+        max-width: 720px;
     }
 
     .home p {
@@ -203,16 +236,22 @@ icon:hover {
       justify-content: center;
     }
     
-    /**.main-nav {
-        display: none;
-    }
-
-    .home {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .gallery {
-        flex-direction: column;
-    }**/
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .product {
+        background-color: lightskyblue;
+        padding-bottom: 5px;
+    }
+
+    .product:nth-child(odd) {
+        background-color: lightyellow;
+    }
+
+    table {
+        width: 250px;
+        margin: 0px 8px;
+    }
 }
