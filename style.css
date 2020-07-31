@@ -51,7 +51,7 @@ h2 {
   }
   
   /**image showcase elements**/
-  
+
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -157,10 +157,13 @@ table, th, td {
 
 /** Contacts page elements**/
 .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 400px;
-    
+    margin: auto;
     text-align: center;
-    color: white;
 }
 
 .orderForm {

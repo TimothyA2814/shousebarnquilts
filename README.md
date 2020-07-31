@@ -25,8 +25,6 @@ To create a web presense for a local crafter to higlight their craft and take or
 5. Navagation menu responsive design for moblie and desktop... Complete.
 6. Rotating image display... Complete.
 7. Testing responsive design... Complete.
-8. Enhance Javascript elements 
-9. 
-10. Testing, issue fixes and polish. 
+8. Testing, issue fixes and polish...Complete.
 
 ## Project status: Set for completion by July 31, 2020
